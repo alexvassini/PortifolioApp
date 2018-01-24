@@ -96,15 +96,15 @@ extension ViewController : UIPageViewControllerDataSource {
     }
     return viewControllersArray[nextIndex]
   }
-
 }
 
 extension ViewController: UIScrollViewDelegate {
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
     let total = scrollView.bounds.width
     let offset = scrollView.contentOffset.x
-    let percent = Double(offset / total) - 1
-    let progress = percent + Double(self.currentView)
+    let percent = (Double(offset / total))
+    var progress = percent + Double(self.currentView) - 1
+    if progress < 0 {progress = 0}
     self.pageControl.progress = progress
   }
 }
