@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4bO-0C-mka">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mJ6-3t-mwq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,81 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="c6Q-6l-mLX">
+            <objects>
+                <viewController id="mJ6-3t-mwq" customClass="ViewController" customModule="resumeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hsa-yW-yfJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQJ-tc-P0k">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="9x0-8B-x88" kind="embed" id="zBL-Hr-OIQ"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEJ-FP-Oma" customClass="CHIPageControlJalapeno" customModule="CHIPageControl">
+                                <rect key="frame" x="30" y="549" width="315" height="98"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="uaC-6e-i3x"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="currentPageTintColor">
+                                        <color key="value" red="0.0" green="0.67561848960000004" blue="0.74614800349999999" alpha="1" colorSpace="deviceRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="inactiveTransparency">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DQJ-tc-P0k" firstAttribute="leading" secondItem="Amu-n4-fxe" secondAttribute="leading" id="5Qa-hM-SHr"/>
+                            <constraint firstItem="Amu-n4-fxe" firstAttribute="trailing" secondItem="dEJ-FP-Oma" secondAttribute="trailing" constant="30" id="AJM-e1-ncr"/>
+                            <constraint firstItem="Amu-n4-fxe" firstAttribute="trailing" secondItem="DQJ-tc-P0k" secondAttribute="trailing" id="Anl-mP-rwn"/>
+                            <constraint firstItem="Amu-n4-fxe" firstAttribute="bottom" secondItem="DQJ-tc-P0k" secondAttribute="bottom" id="emK-kT-9JL"/>
+                            <constraint firstItem="dEJ-FP-Oma" firstAttribute="top" secondItem="DQJ-tc-P0k" secondAttribute="bottom" constant="-118" id="oFu-fW-va0"/>
+                            <constraint firstItem="DQJ-tc-P0k" firstAttribute="top" secondItem="hsa-yW-yfJ" secondAttribute="top" id="p61-fK-Iux"/>
+                            <constraint firstItem="dEJ-FP-Oma" firstAttribute="centerX" secondItem="DQJ-tc-P0k" secondAttribute="centerX" id="tl9-4h-8wF"/>
+                            <constraint firstItem="dEJ-FP-Oma" firstAttribute="leading" secondItem="Amu-n4-fxe" secondAttribute="leading" constant="30" id="zrp-Fn-60l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Amu-n4-fxe"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="dEJ-FP-Oma" id="Jta-ey-rCR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gH1-aS-3n6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-183.19999999999999" y="-213.64317841079463"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="MYv-ag-phI">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="9x0-8B-x88" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Osw-vp-JqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-183" y="595"/>
+        </scene>
         <!--Bio View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -69,14 +144,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qi6-Yd-CRj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3468" y="-132"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="BQy-Go-tHW">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="4bO-0C-mka" customClass="ViewController" customModule="resumeApp" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gAP-uc-G13" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="367" y="-131"/>
         </scene>
     </scenes>
 </document>

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CHIPageControl
 
-class ViewController: UIPageViewController, UIPageViewControllerDataSource {
+class ViewController: UIViewController {
   
   private lazy var viewControllersArray: [UIViewController] = {
     return [self.newViewController("Bio"),
@@ -17,13 +18,29 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource {
             self.newViewController("Achievements")]
   }()
   
+  @IBOutlet weak var pageControl: CHIPageControlJalapeno!
+  
+  private let numberOfPages = 4
+  private var currentView = 0
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    let pageView = self.childViewControllers.first as! UIPageViewController
+    pageView.dataSource = self
+    pageControl.set(progress: 0, animated: false)
     
-    self.dataSource = self
+//    //Get each UIScrollView inside UIPageViewController
+    let scrollView = pageView.view.subviews.filter { $0 is UIScrollView }.first as! UIScrollView
+    scrollView.delegate = self
     
+//    for v in pageView.view.subviews{
+//      if v.isKindOfClass(UIScrollView){
+//        (v as UIScrollView).delegate = self
+//      }
+//    }
+
     if let firstViewController = viewControllersArray.first {
-      setViewControllers([firstViewController],
+      pageView.setViewControllers([firstViewController],
                          direction: .forward,
                          animated: true,
                          completion: nil)
@@ -35,11 +52,21 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
+ 
+  private func newViewController(_ name: String) -> UIViewController {
+    return UIStoryboard(name: "Main", bundle: nil) .
+      instantiateViewController(withIdentifier: "\(name)")
+  }
+  
+}
+
+extension ViewController : UIPageViewControllerDataSource {
   
   func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
     guard let viewControllerIndex = viewControllersArray.index(of: viewController) else {
       return nil
     }
+    self.currentView = viewControllerIndex
     
     let previousIndex = viewControllerIndex - 1
     
@@ -50,7 +77,6 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource {
     guard viewControllersArray.count > previousIndex else {
       return nil
     }
-    
     return viewControllersArray[previousIndex]
   }
   
@@ -58,24 +84,27 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource {
     guard let viewControllerIndex = viewControllersArray.index(of: viewController) else {
       return nil
     }
-    
+    self.currentView = viewControllerIndex
     let nextIndex = viewControllerIndex + 1
     let orderedViewControllersCount = viewControllersArray.count
     
     guard orderedViewControllersCount != nextIndex else {
       return nil
     }
-    
     guard orderedViewControllersCount > nextIndex else {
       return nil
     }
-    
     return viewControllersArray[nextIndex]
   }
- 
-  private func newViewController(_ name: String) -> UIViewController {
-    return UIStoryboard(name: "Main", bundle: nil) .
-      instantiateViewController(withIdentifier: "\(name)")
+
+}
+
+extension ViewController: UIScrollViewDelegate {
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    let total = scrollView.bounds.width
+    let offset = scrollView.contentOffset.x
+    let percent = Double(offset / total) - 1
+    let progress = percent + Double(self.currentView)
+    self.pageControl.progress = progress
   }
-  
 }
