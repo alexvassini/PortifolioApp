@@ -25,11 +25,11 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEJ-FP-Oma" customClass="CHIPageControlJalapeno" customModule="CHIPageControl">
-                                <rect key="frame" x="30" y="549" width="315" height="98"/>
+                                <rect key="frame" x="30" y="637" width="315" height="10"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="98" id="uaC-6e-i3x"/>
+                                    <constraint firstAttribute="height" constant="10" id="uaC-6e-i3x"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
@@ -61,8 +61,8 @@
                             <constraint firstItem="DQJ-tc-P0k" firstAttribute="leading" secondItem="Amu-n4-fxe" secondAttribute="leading" id="5Qa-hM-SHr"/>
                             <constraint firstItem="Amu-n4-fxe" firstAttribute="trailing" secondItem="dEJ-FP-Oma" secondAttribute="trailing" constant="30" id="AJM-e1-ncr"/>
                             <constraint firstItem="Amu-n4-fxe" firstAttribute="trailing" secondItem="DQJ-tc-P0k" secondAttribute="trailing" id="Anl-mP-rwn"/>
+                            <constraint firstItem="Amu-n4-fxe" firstAttribute="bottom" secondItem="dEJ-FP-Oma" secondAttribute="bottom" constant="20" id="GSG-7u-1I4"/>
                             <constraint firstItem="Amu-n4-fxe" firstAttribute="bottom" secondItem="DQJ-tc-P0k" secondAttribute="bottom" id="emK-kT-9JL"/>
-                            <constraint firstItem="dEJ-FP-Oma" firstAttribute="top" secondItem="DQJ-tc-P0k" secondAttribute="bottom" constant="-118" id="oFu-fW-va0"/>
                             <constraint firstItem="DQJ-tc-P0k" firstAttribute="top" secondItem="hsa-yW-yfJ" secondAttribute="top" id="p61-fK-Iux"/>
                             <constraint firstItem="dEJ-FP-Oma" firstAttribute="centerX" secondItem="DQJ-tc-P0k" secondAttribute="centerX" id="tl9-4h-8wF"/>
                             <constraint firstItem="dEJ-FP-Oma" firstAttribute="leading" secondItem="Amu-n4-fxe" secondAttribute="leading" constant="30" id="zrp-Fn-60l"/>
@@ -107,13 +107,27 @@
                     <view key="view" contentMode="scaleToFill" id="bqA-p6-XEc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Mq-wN-tmc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.41568627450000001" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4Mq-wN-tmc" firstAttribute="leading" secondItem="tij-TB-YX6" secondAttribute="leading" id="Hli-fy-hhE"/>
+                            <constraint firstItem="tij-TB-YX6" firstAttribute="trailing" secondItem="4Mq-wN-tmc" secondAttribute="trailing" id="cyl-pD-ZsK"/>
+                            <constraint firstItem="tij-TB-YX6" firstAttribute="bottom" secondItem="4Mq-wN-tmc" secondAttribute="bottom" id="dgb-DA-0hb"/>
+                            <constraint firstItem="4Mq-wN-tmc" firstAttribute="top" secondItem="bqA-p6-XEc" secondAttribute="top" id="poX-yy-m3c"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tij-TB-YX6"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9L-sd-eLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1943" y="-133"/>
+            <point key="canvasLocation" x="1941.5999999999999" y="-133.5832083958021"/>
         </scene>
         <!--Projects View Controller-->
         <scene sceneID="aUt-3h-CMu">
@@ -122,13 +136,46 @@
                     <view key="view" contentMode="scaleToFill" id="AzG-k0-4ne">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.86666666670000003" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="180" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lgk-e1-Pxv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vda-3u-zJ3">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </tableView>
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flight-Simulators.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Nfr-DZ-vtF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="fz7-je-ntN"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nfr-DZ-vtF" firstAttribute="top" secondItem="AzG-k0-4ne" secondAttribute="top" id="5Vx-9K-PHM"/>
+                            <constraint firstItem="Nfr-DZ-vtF" firstAttribute="leading" secondItem="Q0q-uV-4EJ" secondAttribute="leading" id="B3P-xd-f2r"/>
+                            <constraint firstItem="Q0q-uV-4EJ" firstAttribute="bottom" secondItem="lgk-e1-Pxv" secondAttribute="bottom" id="Iv9-aJ-ZZl"/>
+                            <constraint firstItem="lgk-e1-Pxv" firstAttribute="leading" secondItem="Q0q-uV-4EJ" secondAttribute="leading" id="IvS-Yu-Eng"/>
+                            <constraint firstItem="Q0q-uV-4EJ" firstAttribute="trailing" secondItem="lgk-e1-Pxv" secondAttribute="trailing" id="Thg-6M-LNf"/>
+                            <constraint firstItem="lgk-e1-Pxv" firstAttribute="top" secondItem="AzG-k0-4ne" secondAttribute="top" id="Y4z-Wb-nuI"/>
+                            <constraint firstItem="Q0q-uV-4EJ" firstAttribute="trailing" secondItem="Nfr-DZ-vtF" secondAttribute="trailing" id="u1L-b2-r3Q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Q0q-uV-4EJ"/>
                     </view>
+                    <connections>
+                        <outlet property="headerHeightConstraint" destination="fz7-je-ntN" id="m1d-is-41l"/>
+                        <outlet property="headerImage" destination="Nfr-DZ-vtF" id="UIz-5e-JPm"/>
+                        <outlet property="tableview" destination="lgk-e1-Pxv" id="K7m-a9-2LQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGx-Mx-0lm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2682" y="-132"/>
+            <point key="canvasLocation" x="2680.8000000000002" y="-132.68365817091455"/>
         </scene>
         <!--Achievements View Controller-->
         <scene sceneID="bdd-s2-AyI">
@@ -146,4 +193,7 @@
             <point key="canvasLocation" x="3468" y="-132"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Flight-Simulators.jpg" width="859" height="479"/>
+    </resources>
 </document>
