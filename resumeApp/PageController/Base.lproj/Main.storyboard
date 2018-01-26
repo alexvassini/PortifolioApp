@@ -92,13 +92,64 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qk7-yr-aSn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="80w-Zy-XTJ"/>
+                                </constraints>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdW-MU-6q2">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFL-PL-eUy">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="xFL-PL-eUy" secondAttribute="trailing" id="ONW-CQ-MbL"/>
+                                    <constraint firstAttribute="bottom" secondItem="xFL-PL-eUy" secondAttribute="bottom" id="UFg-BN-sTq"/>
+                                    <constraint firstItem="xFL-PL-eUy" firstAttribute="top" secondItem="hdW-MU-6q2" secondAttribute="top" id="UZ1-Ny-NVp"/>
+                                    <constraint firstItem="xFL-PL-eUy" firstAttribute="width" secondItem="hdW-MU-6q2" secondAttribute="width" id="aLS-fe-LFg"/>
+                                    <constraint firstItem="xFL-PL-eUy" firstAttribute="leading" secondItem="hdW-MU-6q2" secondAttribute="leading" id="oVI-p1-zVd"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QFL-wd-za7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="h7o-4l-wAw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.34901960780000002" green="0.17254901959999999" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xFL-PL-eUy" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="0to-We-nNx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hdW-MU-6q2" secondAttribute="bottom" id="HeQ-xk-aup"/>
+                            <constraint firstItem="qk7-yr-aSn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MaQ-7s-Lxs"/>
+                            <constraint firstItem="xFL-PL-eUy" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="R90-ha-eMI"/>
+                            <constraint firstItem="qk7-yr-aSn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aRe-Hy-Elh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qk7-yr-aSn" secondAttribute="trailing" id="asE-mm-qJN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hdW-MU-6q2" secondAttribute="trailing" id="cwi-0i-jbZ"/>
+                            <constraint firstItem="hdW-MU-6q2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gvA-yK-sns"/>
+                            <constraint firstItem="hdW-MU-6q2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lUZ-um-Soi"/>
+                            <constraint firstItem="QFL-wd-za7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="u6q-UG-JZ3"/>
+                            <constraint firstItem="QFL-wd-za7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ve3-Wk-DR4"/>
+                            <constraint firstItem="QFL-wd-za7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vew-HP-2zw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="headerHeightConstraint" destination="80w-Zy-XTJ" id="AMf-F3-LPp"/>
+                        <outlet property="headerImage" destination="qk7-yr-aSn" id="dGb-xm-f7M"/>
+                        <outlet property="navBar" destination="QFL-wd-za7" id="Gjk-2e-STS"/>
+                        <outlet property="scrollView" destination="hdW-MU-6q2" id="B1k-UV-PYk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1164" y="-132"/>
+            <point key="canvasLocation" x="1164" y="-132.68365817091455"/>
         </scene>
         <!--Skills View Controller-->
         <scene sceneID="o1J-Ie-V4C">
@@ -310,6 +361,7 @@
     </scenes>
     <resources>
         <image name="background.png" width="744" height="1392"/>
+        <image name="bg1.jpg" width="564" height="848"/>
         <image name="bg2.jpg" width="564" height="851"/>
         <image name="bg3.jpg" width="564" height="1002"/>
     </resources>

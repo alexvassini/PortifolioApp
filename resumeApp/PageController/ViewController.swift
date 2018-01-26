@@ -32,12 +32,6 @@ class ViewController: UIViewController {
 //    //Get each UIScrollView inside UIPageViewController
     let scrollView = pageView.view.subviews.filter { $0 is UIScrollView }.first as! UIScrollView
     scrollView.delegate = self
-    
-//    for v in pageView.view.subviews{
-//      if v.isKindOfClass(UIScrollView){
-//        (v as UIScrollView).delegate = self
-//      }
-//    }
 
     if let firstViewController = viewControllersArray.first {
       pageView.setViewControllers([firstViewController],
