@@ -6,6 +6,8 @@ target 'resumeApp' do
   use_frameworks!
   
   pod 'CHIPageControl', '~> 0.1.3'
+  pod 'UICircularProgressRing'
+
   # Pods for resumeApp
   
 end

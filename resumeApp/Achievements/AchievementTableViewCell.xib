@@ -7,58 +7,73 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AchievementTableViewCell" rowHeight="80" id="KGk-i7-Jjw" customClass="AchievementTableViewCell" customModule="resumeApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AchievementTableViewCell" rowHeight="100" id="KGk-i7-Jjw" customClass="AchievementTableViewCell" customModule="resumeApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CME-GM-Nvr">
-                        <rect key="frame" x="61" y="20" width="253" height="39.5"/>
+                        <rect key="frame" x="5" y="36" width="310" height="44.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dobrar lençol com elastico com maestria e precisão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vly-eA-DXr">
+                                <rect key="frame" x="66" y="3" width="234" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vly-eA-DXr" firstAttribute="top" secondItem="CME-GM-Nvr" secondAttribute="top" constant="3" id="f18-nG-i4d"/>
+                            <constraint firstAttribute="bottom" secondItem="vly-eA-DXr" secondAttribute="bottom" constant="8" id="fee-5H-YmO"/>
+                            <constraint firstAttribute="trailing" secondItem="vly-eA-DXr" secondAttribute="trailing" constant="10" id="yf5-7F-sqv"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="6"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="UKV-5z-pHX">
-                        <rect key="frame" x="16" y="10" width="60" height="60"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="006-star.png" translatesAutoresizingMaskIntoConstraints="NO" id="UKV-5z-pHX">
+                        <rect key="frame" x="12" y="8" width="50" height="50"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="60" id="AYL-n2-Bkf"/>
-                            <constraint firstAttribute="width" secondItem="UKV-5z-pHX" secondAttribute="height" multiplier="1:1" id="MMr-BW-kaI"/>
+                            <constraint firstAttribute="width" constant="50" id="5SN-o8-bAx"/>
+                            <constraint firstAttribute="width" secondItem="UKV-5z-pHX" secondAttribute="height" multiplier="1:1" id="AD8-bm-nIG"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="30"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Useless Superpower" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kq-5P-OGw">
+                        <rect key="frame" x="70" y="14.5" width="161.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="CME-GM-Nvr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6za-hb-DbM"/>
-                    <constraint firstItem="CME-GM-Nvr" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.5" id="8yz-LB-pav"/>
-                    <constraint firstItem="UKV-5z-pHX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="GTt-Ac-RKO"/>
-                    <constraint firstAttribute="trailing" secondItem="CME-GM-Nvr" secondAttribute="trailing" constant="6" id="edx-Fq-F7p"/>
-                    <constraint firstItem="CME-GM-Nvr" firstAttribute="leading" secondItem="UKV-5z-pHX" secondAttribute="trailing" constant="-15" id="hgi-4C-csV"/>
-                    <constraint firstItem="UKV-5z-pHX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="zNA-Pl-K8u"/>
+                    <constraint firstItem="4kq-5P-OGw" firstAttribute="leading" secondItem="UKV-5z-pHX" secondAttribute="trailing" constant="8" id="9Kp-ZV-eiR"/>
+                    <constraint firstAttribute="trailing" secondItem="CME-GM-Nvr" secondAttribute="trailing" constant="5" id="Jvv-Hc-ekD"/>
+                    <constraint firstItem="CME-GM-Nvr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="KEB-99-dNi"/>
+                    <constraint firstItem="CME-GM-Nvr" firstAttribute="centerY" secondItem="UKV-5z-pHX" secondAttribute="centerY" constant="25" id="Kdm-gq-W80"/>
+                    <constraint firstItem="UKV-5z-pHX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="R06-09-ABN"/>
+                    <constraint firstItem="UKV-5z-pHX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="V0g-pH-Er0"/>
+                    <constraint firstItem="vly-eA-DXr" firstAttribute="leading" secondItem="UKV-5z-pHX" secondAttribute="trailing" constant="9" id="aHE-ch-Atn"/>
+                    <constraint firstItem="CME-GM-Nvr" firstAttribute="top" secondItem="4kq-5P-OGw" secondAttribute="bottom" constant="1" id="wR4-yj-ukT"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="14" y="58"/>
+            <point key="canvasLocation" x="14" y="157"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="bg1.jpg" width="564" height="848"/>
+        <image name="006-star.png" width="512" height="512"/>
     </resources>
 </document>

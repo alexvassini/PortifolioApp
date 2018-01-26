@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="SkillsTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="SkillsTableViewCell" rowHeight="80" id="KGk-i7-Jjw" customClass="SkillsTableViewCell" customModule="resumeApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R96-wq-gtw" customClass="UICircularProgressRingView" customModule="UICircularProgressRing">
+                        <rect key="frame" x="12" y="12" width="55.5" height="55.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="R96-wq-gtw" secondAttribute="height" multiplier="1:1" id="5Vb-gR-NSN"/>
+                            <constraint firstAttribute="height" constant="55.5" id="Jwl-9B-ico"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="fullCircle" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                <real key="value" value="23"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="ibRingStyle">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="outerRingColor">
+                                <color key="value" red="0.0" green="0.67561848960000004" blue="0.74614800349999999" alpha="1" colorSpace="deviceRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="innerRingColor">
+                                <color key="value" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="innerRingWidth">
+                                <real key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="outerRingWidth">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="something relevant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54E-fO-kUW">
+                        <rect key="frame" x="81" y="29" width="213" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="54E-fO-kUW" firstAttribute="leading" secondItem="R96-wq-gtw" secondAttribute="trailing" constant="13.5" id="IcV-X9-gL0"/>
+                    <constraint firstItem="R96-wq-gtw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="QCH-zq-Geh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="54E-fO-kUW" secondAttribute="trailing" constant="10" id="YEM-DQ-m6l"/>
+                    <constraint firstItem="54E-fO-kUW" firstAttribute="centerY" secondItem="R96-wq-gtw" secondAttribute="centerY" id="jyL-GL-Pak"/>
+                    <constraint firstItem="R96-wq-gtw" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mjl-KP-P5v"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="25" y="104"/>
+        </tableViewCell>
+    </objects>
+</document>

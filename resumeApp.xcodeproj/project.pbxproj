@@ -25,6 +25,8 @@
 		ACAEBC85201BAC2B005434EB /* 007-cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = ACAEBC7C201BAC2A005434EB /* 007-cancel.png */; };
 		ACAEBC86201BAC2B005434EB /* 001-github.png in Resources */ = {isa = PBXBuildFile; fileRef = ACAEBC7D201BAC2A005434EB /* 001-github.png */; };
 		ACAEBC87201BAC2B005434EB /* 002-linkedin.png in Resources */ = {isa = PBXBuildFile; fileRef = ACAEBC7E201BAC2B005434EB /* 002-linkedin.png */; };
+		ACAEBC8A201BDCC0005434EB /* SkillsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAEBC88201BDCC0005434EB /* SkillsTableViewCell.swift */; };
+		ACAEBC8B201BDCC0005434EB /* SkillsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACAEBC89201BDCC0005434EB /* SkillsTableViewCell.xib */; };
 		ACC9A544201A397300339943 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC9A543201A397300339943 /* background.png */; };
 		ACC9A546201A421F00339943 /* bg3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACC9A545201A421F00339943 /* bg3.jpg */; };
 		ACC9A548201A422900339943 /* bg1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACC9A547201A422900339943 /* bg1.jpg */; };
@@ -59,6 +61,8 @@
 		ACAEBC7C201BAC2A005434EB /* 007-cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "007-cancel.png"; sourceTree = "<group>"; };
 		ACAEBC7D201BAC2A005434EB /* 001-github.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "001-github.png"; sourceTree = "<group>"; };
 		ACAEBC7E201BAC2B005434EB /* 002-linkedin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "002-linkedin.png"; sourceTree = "<group>"; };
+		ACAEBC88201BDCC0005434EB /* SkillsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsTableViewCell.swift; sourceTree = "<group>"; };
+		ACAEBC89201BDCC0005434EB /* SkillsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillsTableViewCell.xib; sourceTree = "<group>"; };
 		ACC9A543201A397300339943 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		ACC9A545201A421F00339943 /* bg3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg3.jpg; sourceTree = "<group>"; };
 		ACC9A547201A422900339943 /* bg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg1.jpg; sourceTree = "<group>"; };
@@ -170,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				ACE6E5C32017E671000F1F63 /* SkillsViewController.swift */,
+				ACAEBC88201BDCC0005434EB /* SkillsTableViewCell.swift */,
+				ACAEBC89201BDCC0005434EB /* SkillsTableViewCell.xib */,
 			);
 			path = Skills;
 			sourceTree = "<group>";
@@ -289,6 +295,7 @@
 				ACAEBC84201BAC2B005434EB /* 009-cup.png in Resources */,
 				ACAEBC85201BAC2B005434EB /* 007-cancel.png in Resources */,
 				ACAEBC80201BAC2B005434EB /* 008-checked.png in Resources */,
+				ACAEBC8B201BDCC0005434EB /* SkillsTableViewCell.xib in Resources */,
 				ACC9A548201A422900339943 /* bg1.jpg in Resources */,
 				ACAEBC81201BAC2B005434EB /* 004-instagram.png in Resources */,
 			);
@@ -323,10 +330,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-resumeApp/Pods-resumeApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CHIPageControl/CHIPageControl.framework",
+				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHIPageControl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -363,6 +372,7 @@
 				ACAEBC73201A7EFB005434EB /* AchievementTableViewCell.swift in Sources */,
 				ACE6E5C22017E664000F1F63 /* BioViewController.swift in Sources */,
 				ACE6E5C62017E68B000F1F63 /* AchievementsViewController.swift in Sources */,
+				ACAEBC8A201BDCC0005434EB /* SkillsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

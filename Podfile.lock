@@ -16,13 +16,16 @@ PODS:
   - CHIPageControl/Jaloro (0.1.4)
   - CHIPageControl/Paprika (0.1.4)
   - CHIPageControl/Puya (0.1.4)
+  - UICircularProgressRing (1.7.5)
 
 DEPENDENCIES:
   - CHIPageControl (~> 0.1.3)
+  - UICircularProgressRing
 
 SPEC CHECKSUMS:
   CHIPageControl: 032b5ab68506c00711d5a61bd83e9fdf2a7ecb22
+  UICircularProgressRing: b35e45dc82aac8009d038ef4d2e19718675df2bd
 
-PODFILE CHECKSUM: 429195891d469eb963cc8ee0d098c9e5cab62aaf
+PODFILE CHECKSUM: ead095d6d1ee4d940659fe75a64d46d56aed07c6
 
 COCOAPODS: 1.3.1
