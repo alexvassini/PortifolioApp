@@ -13,9 +13,10 @@ class ProjectsViewController: UIViewController {
   @IBOutlet weak var tableview: UITableView!
   @IBOutlet weak var headerImage: UIImageView!
   @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
+  @IBOutlet weak var navBar: UIView!
   
-  var previousYOffset:CGFloat = -20.0
-  //var headerHeight:CGFloat = 160
+  var headerHeight: CGFloat = 200.0
+  var headerMultiplier: CGFloat = 0.2
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,9 +27,24 @@ class ProjectsViewController: UIViewController {
     // Do any additional setup after loading the view.
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  override func viewWillAppear(_ animated: Bool) {
+    setupoParalaxHeader()
+    setupNavBar()
+  }
+  
+  func setupoParalaxHeader() {
+    headerHeight = self.view.frame.height * headerMultiplier
+    headerHeightConstraint.constant = headerHeight
+    tableview.contentInset = UIEdgeInsets(top: headerHeight, left: 0, bottom: 0, right: 0)
+    tableview.contentOffset.y = -(headerHeight)
+  }
+  
+  func setupNavBar() {
+    navBar.layer.shadowColor = UIColor.black.cgColor
+    navBar.layer.shadowOffset = CGSize(width: 0.2, height: 0.2)
+    navBar.layer.shadowRadius = 0.2
+    navBar.layer.shadowOpacity = 0.9
+    navBar.alpha = 0.0
   }
 
 }
@@ -57,17 +73,12 @@ extension ProjectsViewController: UIScrollViewDelegate {
 
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
     
-    let yOffset = scrollView.contentOffset.y
-    let diff = yOffset - previousYOffset
-    previousYOffset = yOffset
-    let headerHeight = headerHeightConstraint.constant - diff
-    if scrollView.contentOffset.y < 80 {
-      if headerHeight < 60 {
-        headerHeightConstraint.constant = 60
-      }
-      else {headerHeightConstraint.constant = headerHeight}
+    let offset = scrollView.contentOffset.y + headerHeight
+    if offset < headerHeight {
+      headerHeightConstraint.constant = headerHeight - offset
+      navBar.alpha = offset / (headerHeight - navBar.frame.height)
     }
-    
+    self.view.layoutIfNeeded()
   }
   
   func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {

@@ -10,26 +10,83 @@ import UIKit
 
 class SkillsViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  @IBOutlet weak var tableview: UITableView!
+  @IBOutlet weak var headerImage: UIImageView!
+  @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
+  @IBOutlet weak var navBar: UIView!
+  
+  var headerHeight: CGFloat = 200.0
+  var headerMultiplier: CGFloat = 0.2
+  
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    tableview.delegate = self
+    tableview.dataSource = self
+    tableview.register(UINib(nibName: "AchievementTableViewCell", bundle: nil), forCellReuseIdentifier: "AchievementTableViewCell")
     
+    // Do any additional setup after loading the view.
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    setupParalaxHeader()
+    setupNavBar()
+  }
+  
+  func setupParalaxHeader() {
+    headerHeight = self.view.frame.height * headerMultiplier
+    headerHeightConstraint.constant = headerHeight
+    tableview.contentInset = UIEdgeInsets(top: headerHeight, left: 0, bottom: 0, right: 0)
+    tableview.contentOffset.y = -(headerHeight)
+  }
+  
+  func setupNavBar() {
+    navBar.layer.shadowColor = UIColor.black.cgColor
+    navBar.layer.shadowOffset = CGSize(width: 0.2, height: 0.2)
+    navBar.layer.shadowRadius = 0.2
+    navBar.layer.shadowOpacity = 0.9
+    navBar.alpha = 0.0
+  }
+  
+}
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension SkillsViewController: UITableViewDelegate, UITableViewDataSource {
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 10
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    let cell = tableView.dequeueReusableCell(withIdentifier: "AchievementTableViewCell", for: indexPath) as! AchievementTableViewCell
+    
+    return cell
+  }
+  
+  
+  func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 80
+  }
+}
+
+extension SkillsViewController: UIScrollViewDelegate {
+  
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    
+    let offset = scrollView.contentOffset.y + headerHeight
+    if offset < headerHeight {
+      headerHeightConstraint.constant = headerHeight - offset
+      navBar.alpha = offset / (headerHeight - navBar.frame.height)
     }
-    */
-
+    self.view.layoutIfNeeded()
+  }
+  
+  func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+  }
+  
+  func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    
+  }
+  
 }
