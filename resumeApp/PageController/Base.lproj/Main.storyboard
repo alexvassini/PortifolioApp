@@ -121,13 +121,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeD-TE-yV5">
-                                                <rect key="frame" x="20" y="80" width="335" height="21"/>
+                                                <rect key="frame" x="20" y="80" width="335" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBv-g6-vsi">
-                                                <rect key="frame" x="20" y="109" width="335" height="286.5"/>
+                                                <rect key="frame" x="20" y="108.5" width="335" height="286.5"/>
                                                 <mutableString key="text">Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Suco de cevadiss deixa as pessoas mais interessantis. Não sou faixa preta cumpadi, sou preto inteiris, inteiris.
 
 Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Per aumento de cachacis, eu reclamis.
@@ -136,15 +136,80 @@ Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Praesent vel
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIh-vh-wHo">
+                                                <rect key="frame" x="47.5" y="405" width="280" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhl-vp-Sdg">
+                                                        <rect key="frame" x="20" y="24" width="32" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Lhl-vp-Sdg" secondAttribute="height" multiplier="1:1" id="ZWE-j7-Ndx"/>
+                                                            <constraint firstAttribute="width" constant="32" id="jep-gR-ZEP"/>
+                                                        </constraints>
+                                                        <state key="normal" image="001-github.png"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a97-d0-Lks">
+                                                        <rect key="frame" x="72" y="24" width="32" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="32" id="h1k-Rz-XPZ"/>
+                                                            <constraint firstAttribute="width" secondItem="a97-d0-Lks" secondAttribute="height" multiplier="1:1" id="kke-3r-ipn"/>
+                                                        </constraints>
+                                                        <state key="normal" image="002-linkedin.png"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0a-2l-seq">
+                                                        <rect key="frame" x="124" y="24" width="32" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="32" id="S2Z-E8-T4S"/>
+                                                            <constraint firstAttribute="width" secondItem="n0a-2l-seq" secondAttribute="height" multiplier="1:1" id="tgw-Od-tOA"/>
+                                                        </constraints>
+                                                        <state key="normal" image="003-whatsapp.png"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1R8-07-4mR">
+                                                        <rect key="frame" x="176" y="24" width="32" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="32" id="kyY-03-O1H"/>
+                                                        </constraints>
+                                                        <state key="normal" image="005-facebook.png"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xr3-4I-uXG">
+                                                        <rect key="frame" x="228" y="24" width="32" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="32" id="2CP-kf-Mi3"/>
+                                                        </constraints>
+                                                        <state key="normal" image="004-instagram.png"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="a97-d0-Lks" firstAttribute="centerY" secondItem="Lhl-vp-Sdg" secondAttribute="centerY" id="4bU-Y2-0KW"/>
+                                                    <constraint firstItem="Lhl-vp-Sdg" firstAttribute="centerY" secondItem="hIh-vh-wHo" secondAttribute="centerY" id="4mc-56-Y3g"/>
+                                                    <constraint firstItem="xr3-4I-uXG" firstAttribute="leading" secondItem="1R8-07-4mR" secondAttribute="trailing" constant="20" id="IUh-mp-V5h"/>
+                                                    <constraint firstItem="1R8-07-4mR" firstAttribute="centerY" secondItem="n0a-2l-seq" secondAttribute="centerY" id="MaG-Is-ZwY"/>
+                                                    <constraint firstItem="xr3-4I-uXG" firstAttribute="width" secondItem="xr3-4I-uXG" secondAttribute="height" multiplier="1:1" id="O2X-gl-cOU"/>
+                                                    <constraint firstItem="n0a-2l-seq" firstAttribute="centerY" secondItem="a97-d0-Lks" secondAttribute="centerY" id="PoD-jO-IHn"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xr3-4I-uXG" secondAttribute="trailing" constant="20" id="Pvy-KZ-LIO"/>
+                                                    <constraint firstItem="1R8-07-4mR" firstAttribute="width" secondItem="1R8-07-4mR" secondAttribute="height" multiplier="1:1" id="Qhn-8H-klS"/>
+                                                    <constraint firstItem="Lhl-vp-Sdg" firstAttribute="leading" secondItem="hIh-vh-wHo" secondAttribute="leading" constant="20" id="UI5-6W-9Zl"/>
+                                                    <constraint firstItem="n0a-2l-seq" firstAttribute="leading" secondItem="a97-d0-Lks" secondAttribute="trailing" constant="20" id="Yrs-3N-nsx"/>
+                                                    <constraint firstItem="a97-d0-Lks" firstAttribute="leading" secondItem="Lhl-vp-Sdg" secondAttribute="trailing" constant="20" id="Yzg-Q8-bYN"/>
+                                                    <constraint firstItem="1R8-07-4mR" firstAttribute="leading" secondItem="n0a-2l-seq" secondAttribute="trailing" constant="20" id="a1F-3s-Ksg"/>
+                                                    <constraint firstItem="n0a-2l-seq" firstAttribute="width" secondItem="n0a-2l-seq" secondAttribute="height" multiplier="1:1" id="csv-BL-kFK"/>
+                                                    <constraint firstItem="xr3-4I-uXG" firstAttribute="centerY" secondItem="1R8-07-4mR" secondAttribute="centerY" id="iwU-Ki-So7"/>
+                                                    <constraint firstItem="1R8-07-4mR" firstAttribute="leading" secondItem="n0a-2l-seq" secondAttribute="trailing" constant="20" id="nFt-A8-iMz"/>
+                                                    <constraint firstItem="a97-d0-Lks" firstAttribute="width" secondItem="a97-d0-Lks" secondAttribute="height" multiplier="1:1" id="qFE-2D-6V4"/>
+                                                    <constraint firstAttribute="height" constant="80" id="vV0-sE-gKQ"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="UBv-g6-vsi" firstAttribute="leading" secondItem="xFL-PL-eUy" secondAttribute="leading" constant="20" id="1yk-0L-XjW"/>
+                                            <constraint firstItem="hIh-vh-wHo" firstAttribute="top" secondItem="UBv-g6-vsi" secondAttribute="bottom" constant="10" id="4R4-OX-Ovv"/>
                                             <constraint firstItem="WeD-TE-yV5" firstAttribute="leading" secondItem="xFL-PL-eUy" secondAttribute="leading" constant="20" id="B9G-hY-UFs"/>
                                             <constraint firstAttribute="trailing" secondItem="WeD-TE-yV5" secondAttribute="trailing" constant="20" id="F1J-rn-p99"/>
                                             <constraint firstItem="UBv-g6-vsi" firstAttribute="top" secondItem="WeD-TE-yV5" secondAttribute="bottom" constant="8" id="OKc-Mc-0Qy"/>
                                             <constraint firstAttribute="trailing" secondItem="UBv-g6-vsi" secondAttribute="trailing" constant="20" id="XdV-Vz-tCL"/>
                                             <constraint firstItem="WeD-TE-yV5" firstAttribute="top" secondItem="xFL-PL-eUy" secondAttribute="top" constant="80" id="v7x-Az-TTa"/>
+                                            <constraint firstItem="hIh-vh-wHo" firstAttribute="centerX" secondItem="xFL-PL-eUy" secondAttribute="centerX" id="z3G-fM-549"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -242,7 +307,7 @@ Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Praesent vel
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1164" y="-132.68365817091455"/>
+            <point key="canvasLocation" x="1164" y="-133.13343328335833"/>
         </scene>
         <!--Skills View Controller-->
         <scene sceneID="o1J-Ie-V4C">
@@ -473,6 +538,11 @@ Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Praesent vel
         </scene>
     </scenes>
     <resources>
+        <image name="001-github.png" width="512" height="512"/>
+        <image name="002-linkedin.png" width="512" height="512"/>
+        <image name="003-whatsapp.png" width="512" height="512"/>
+        <image name="004-instagram.png" width="512" height="512"/>
+        <image name="005-facebook.png" width="512" height="512"/>
         <image name="Nasa.jpg" width="1986" height="464"/>
         <image name="award.jpg" width="720" height="420"/>
         <image name="bg2.jpg" width="564" height="851"/>
