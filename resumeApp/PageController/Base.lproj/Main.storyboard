@@ -26,15 +26,29 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEJ-FP-Oma" customClass="CHIPageControlJalapeno" customModule="CHIPageControl">
-                                <rect key="frame" x="30" y="637" width="315" height="10"/>
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8g-R9-4Mc">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NnN-kU-7Wj">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <blurEffect style="light"/>
+                                    </visualEffectView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="10" id="uaC-6e-i3x"/>
+                                    <constraint firstAttribute="bottom" secondItem="z8g-R9-4Mc" secondAttribute="bottom" id="8ld-FU-PXr"/>
+                                    <constraint firstAttribute="trailing" secondItem="z8g-R9-4Mc" secondAttribute="trailing" id="9BT-8E-q6o"/>
+                                    <constraint firstItem="z8g-R9-4Mc" firstAttribute="leading" secondItem="dEJ-FP-Oma" secondAttribute="leading" id="YuI-jV-7oG"/>
+                                    <constraint firstItem="z8g-R9-4Mc" firstAttribute="top" secondItem="dEJ-FP-Oma" secondAttribute="top" id="uOr-wl-F4F"/>
+                                    <constraint firstAttribute="height" constant="40" id="uaC-6e-i3x"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
-                                        <integer key="value" value="4"/>
+                                        <integer key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progress">
                                         <real key="value" value="1"/>
@@ -60,13 +74,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DQJ-tc-P0k" firstAttribute="leading" secondItem="Amu-n4-fxe" secondAttribute="leading" id="5Qa-hM-SHr"/>
-                            <constraint firstItem="Amu-n4-fxe" firstAttribute="trailing" secondItem="dEJ-FP-Oma" secondAttribute="trailing" constant="30" id="AJM-e1-ncr"/>
+                            <constraint firstItem="Amu-n4-fxe" firstAttribute="trailing" secondItem="dEJ-FP-Oma" secondAttribute="trailing" id="AJM-e1-ncr"/>
                             <constraint firstItem="Amu-n4-fxe" firstAttribute="trailing" secondItem="DQJ-tc-P0k" secondAttribute="trailing" id="Anl-mP-rwn"/>
-                            <constraint firstItem="Amu-n4-fxe" firstAttribute="bottom" secondItem="dEJ-FP-Oma" secondAttribute="bottom" constant="20" id="GSG-7u-1I4"/>
+                            <constraint firstItem="Amu-n4-fxe" firstAttribute="bottom" secondItem="dEJ-FP-Oma" secondAttribute="bottom" id="GSG-7u-1I4"/>
                             <constraint firstItem="Amu-n4-fxe" firstAttribute="bottom" secondItem="DQJ-tc-P0k" secondAttribute="bottom" id="emK-kT-9JL"/>
                             <constraint firstItem="DQJ-tc-P0k" firstAttribute="top" secondItem="hsa-yW-yfJ" secondAttribute="top" id="p61-fK-Iux"/>
                             <constraint firstItem="dEJ-FP-Oma" firstAttribute="centerX" secondItem="DQJ-tc-P0k" secondAttribute="centerX" id="tl9-4h-8wF"/>
-                            <constraint firstItem="dEJ-FP-Oma" firstAttribute="leading" secondItem="Amu-n4-fxe" secondAttribute="leading" constant="30" id="zrp-Fn-60l"/>
+                            <constraint firstItem="dEJ-FP-Oma" firstAttribute="leading" secondItem="Amu-n4-fxe" secondAttribute="leading" id="zrp-Fn-60l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Amu-n4-fxe"/>
                     </view>
@@ -183,9 +197,19 @@ Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Praesent vel
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QFL-wd-za7">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pnc-cX-nhb">
+                                        <rect key="frame" x="154.5" y="17.5" width="67" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" red="0.98823529409999999" green="0.99607843139999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="h7o-4l-wAw"/>
+                                    <constraint firstItem="Pnc-cX-nhb" firstAttribute="centerX" secondItem="QFL-wd-za7" secondAttribute="centerX" id="saU-ps-klt"/>
+                                    <constraint firstItem="Pnc-cX-nhb" firstAttribute="centerY" secondItem="QFL-wd-za7" secondAttribute="centerY" id="uR0-9d-cwO"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -228,7 +252,7 @@ Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Praesent vel
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Zx9-tz-ocF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgSkills.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Zx9-tz-ocF">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="QLt-r5-g9a"/>
@@ -257,9 +281,19 @@ Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Praesent vel
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GrQ-RD-pl9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
-                                <color key="backgroundColor" red="1" green="0.41568627450000001" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUN-9R-F0t">
+                                        <rect key="frame" x="159.5" y="17.5" width="55.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" red="0.98823529409999999" green="0.99607843139999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.67561848960000004" blue="0.74614800349999999" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="rYk-dX-NMp"/>
+                                    <constraint firstItem="rUN-9R-F0t" firstAttribute="centerX" secondItem="GrQ-RD-pl9" secondAttribute="centerX" id="sYA-lf-ARf"/>
+                                    <constraint firstItem="rUN-9R-F0t" firstAttribute="centerY" secondItem="GrQ-RD-pl9" secondAttribute="centerY" id="uqj-wt-qsj"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -366,7 +400,7 @@ Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Praesent vel
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y9h-k0-8Z8">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="award.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Y9h-k0-8Z8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -395,9 +429,19 @@ Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Praesent vel
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mlm-Cm-jnW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achievements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylh-1n-plO">
+                                        <rect key="frame" x="120" y="18" width="135" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" red="0.98823529409999999" green="0.99607843139999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.6588235294" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="0hA-dc-YIe"/>
+                                    <constraint firstItem="Ylh-1n-plO" firstAttribute="centerX" secondItem="Mlm-Cm-jnW" secondAttribute="centerX" id="HmB-nm-7jH"/>
+                                    <constraint firstItem="Ylh-1n-plO" firstAttribute="centerY" secondItem="Mlm-Cm-jnW" secondAttribute="centerY" id="MXN-vT-hdx"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -430,9 +474,9 @@ Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Praesent vel
     </scenes>
     <resources>
         <image name="Nasa.jpg" width="1986" height="464"/>
-        <image name="background.png" width="744" height="1392"/>
+        <image name="award.jpg" width="720" height="420"/>
         <image name="bg2.jpg" width="564" height="851"/>
-        <image name="bg3.jpg" width="564" height="1002"/>
+        <image name="bgSkills.jpeg" width="1280" height="960"/>
         <image name="profile.jpg" width="960" height="960"/>
     </resources>
 </document>

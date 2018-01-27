@@ -10,7 +10,12 @@ import UIKit
 
 class AchievementTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
+  @IBOutlet weak var nameLabel: UILabel!
+  @IBOutlet weak var descriptionLabel: UILabel!
+  
+  
+  
+  override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

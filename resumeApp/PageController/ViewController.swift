@@ -14,17 +14,18 @@ class ViewController: UIViewController {
   private lazy var viewControllersArray: [UIViewController] = {
     return [self.newViewController("Bio"),
             self.newViewController("Skills"),
-            self.newViewController("Projects"),
+            //self.newViewController("Projects"),
             self.newViewController("Achievements")]
   }()
   
   @IBOutlet weak var pageControl: CHIPageControlJalapeno!
   
-  private let numberOfPages = 4
+  private let numberOfPages = 3
   private var currentView = 0
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    UIApplication.shared.statusBarStyle = .lightContent
     let pageView = self.childViewControllers.first as! UIPageViewController
     pageView.dataSource = self
     pageControl.set(progress: 0, animated: false)

@@ -8,10 +8,6 @@
 
 import Foundation
 
-
-
-
-
 class SkillModel {
   
   var skills: [Skill] = []

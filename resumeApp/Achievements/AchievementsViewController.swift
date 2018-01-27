@@ -17,7 +17,7 @@ class AchievementsViewController: UIViewController {
   
   var headerHeight: CGFloat = 200.0
   var headerMultiplier: CGFloat = 0.2
-  
+  var model = AchievementsModel()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -54,12 +54,14 @@ class AchievementsViewController: UIViewController {
 extension AchievementsViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 10
+    return model.achievements.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "AchievementTableViewCell", for: indexPath) as! AchievementTableViewCell
+    cell.nameLabel.text = model.achievements[indexPath.row].name
+    cell.descriptionLabel.text = model.achievements[indexPath.row].description
     
     return cell
   }
