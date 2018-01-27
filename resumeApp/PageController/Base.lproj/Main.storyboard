@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -90,21 +91,47 @@
             <objects>
                 <viewController storyboardIdentifier="Bio" id="BYZ-38-t0r" customClass="BioViewController" customModule="resumeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qk7-yr-aSn">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nasa.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qk7-yr-aSn">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="80w-Zy-XTJ"/>
                                 </constraints>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdW-MU-6q2">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFL-PL-eUy">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeD-TE-yV5">
+                                                <rect key="frame" x="20" y="80" width="335" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBv-g6-vsi">
+                                                <rect key="frame" x="20" y="109" width="335" height="286.5"/>
+                                                <mutableString key="text">Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Suco de cevadiss deixa as pessoas mais interessantis. Não sou faixa preta cumpadi, sou preto inteiris, inteiris.
+
+Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Per aumento de cachacis, eu reclamis.
+</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="UBv-g6-vsi" firstAttribute="leading" secondItem="xFL-PL-eUy" secondAttribute="leading" constant="20" id="1yk-0L-XjW"/>
+                                            <constraint firstItem="WeD-TE-yV5" firstAttribute="leading" secondItem="xFL-PL-eUy" secondAttribute="leading" constant="20" id="B9G-hY-UFs"/>
+                                            <constraint firstAttribute="trailing" secondItem="WeD-TE-yV5" secondAttribute="trailing" constant="20" id="F1J-rn-p99"/>
+                                            <constraint firstItem="UBv-g6-vsi" firstAttribute="top" secondItem="WeD-TE-yV5" secondAttribute="bottom" constant="8" id="OKc-Mc-0Qy"/>
+                                            <constraint firstAttribute="trailing" secondItem="UBv-g6-vsi" secondAttribute="trailing" constant="20" id="XdV-Vz-tCL"/>
+                                            <constraint firstItem="WeD-TE-yV5" firstAttribute="top" secondItem="xFL-PL-eUy" secondAttribute="top" constant="80" id="v7x-Az-TTa"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -115,6 +142,45 @@
                                     <constraint firstItem="xFL-PL-eUy" firstAttribute="leading" secondItem="hdW-MU-6q2" secondAttribute="leading" id="oVI-p1-zVd"/>
                                 </constraints>
                             </scrollView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xPY-Wb-yFj">
+                                <rect key="frame" x="127" y="120" width="120" height="120"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUv-wW-t9S">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JTT-Od-EnK">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <blurEffect style="light"/>
+                                    </visualEffectView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7wD-U7-njk">
+                                        <rect key="frame" x="6" y="6" width="108" height="108"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="54"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xPY-Wb-yFj" secondAttribute="height" multiplier="1:1" id="ERu-WH-UES"/>
+                                    <constraint firstAttribute="trailing" secondItem="dUv-wW-t9S" secondAttribute="trailing" id="G5p-Gp-xhZ"/>
+                                    <constraint firstItem="7wD-U7-njk" firstAttribute="leading" secondItem="xPY-Wb-yFj" secondAttribute="leading" constant="6" id="Ghe-Zm-TLh"/>
+                                    <constraint firstItem="dUv-wW-t9S" firstAttribute="top" secondItem="xPY-Wb-yFj" secondAttribute="top" id="IP5-TB-7aO"/>
+                                    <constraint firstItem="7wD-U7-njk" firstAttribute="top" secondItem="xPY-Wb-yFj" secondAttribute="top" constant="6" id="QU5-sG-81D"/>
+                                    <constraint firstAttribute="bottom" secondItem="dUv-wW-t9S" secondAttribute="bottom" id="R1d-Ef-fMA"/>
+                                    <constraint firstAttribute="bottom" secondItem="7wD-U7-njk" secondAttribute="bottom" constant="6" id="cdF-Fg-yH0"/>
+                                    <constraint firstItem="dUv-wW-t9S" firstAttribute="leading" secondItem="xPY-Wb-yFj" secondAttribute="leading" id="dI2-3a-PMn"/>
+                                    <constraint firstAttribute="height" constant="120" id="k98-bq-5Tq"/>
+                                    <constraint firstAttribute="trailing" secondItem="7wD-U7-njk" secondAttribute="trailing" constant="6" id="uXV-gz-RQ3"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QFL-wd-za7">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -123,9 +189,10 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.34901960780000002" green="0.17254901959999999" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xFL-PL-eUy" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="0to-We-nNx"/>
+                            <constraint firstItem="xPY-Wb-yFj" firstAttribute="centerX" secondItem="qk7-yr-aSn" secondAttribute="centerX" id="5ib-41-P1u"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hdW-MU-6q2" secondAttribute="bottom" id="HeQ-xk-aup"/>
                             <constraint firstItem="qk7-yr-aSn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MaQ-7s-Lxs"/>
                             <constraint firstItem="xFL-PL-eUy" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="R90-ha-eMI"/>
@@ -133,13 +200,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qk7-yr-aSn" secondAttribute="trailing" id="asE-mm-qJN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hdW-MU-6q2" secondAttribute="trailing" id="cwi-0i-jbZ"/>
                             <constraint firstItem="hdW-MU-6q2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gvA-yK-sns"/>
-                            <constraint firstItem="hdW-MU-6q2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lUZ-um-Soi"/>
+                            <constraint firstItem="hdW-MU-6q2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="h8V-TI-G60"/>
+                            <constraint firstItem="xPY-Wb-yFj" firstAttribute="bottom" secondItem="qk7-yr-aSn" secondAttribute="bottom" constant="60" id="jOj-Y6-aF1"/>
                             <constraint firstItem="QFL-wd-za7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="u6q-UG-JZ3"/>
                             <constraint firstItem="QFL-wd-za7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ve3-Wk-DR4"/>
                             <constraint firstItem="QFL-wd-za7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vew-HP-2zw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <size key="freeformSize" width="375" height="900"/>
                     <connections>
                         <outlet property="headerHeightConstraint" destination="80w-Zy-XTJ" id="AMf-F3-LPp"/>
                         <outlet property="headerImage" destination="qk7-yr-aSn" id="dGb-xm-f7M"/>
@@ -360,9 +429,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Nasa.jpg" width="1986" height="464"/>
         <image name="background.png" width="744" height="1392"/>
-        <image name="bg1.jpg" width="564" height="848"/>
         <image name="bg2.jpg" width="564" height="851"/>
         <image name="bg3.jpg" width="564" height="1002"/>
+        <image name="profile.jpg" width="960" height="960"/>
     </resources>
 </document>

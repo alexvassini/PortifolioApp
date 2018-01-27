@@ -17,7 +17,7 @@ class SkillsViewController: UIViewController {
   
   var headerHeight: CGFloat = 200.0
   var headerMultiplier: CGFloat = 0.2
-  
+  var model = SkillModel()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -54,12 +54,15 @@ class SkillsViewController: UIViewController {
 extension SkillsViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 10
+    return self.model.skills.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "SkillsTableViewCell", for: indexPath) as! SkillsTableViewCell
+    cell.label.text = model.skills[indexPath.row].name
+    let progress = model.skills[indexPath.row].percentage
+    cell.progressBar.setProgress(value: CGFloat(progress!), animationDuration: 0.3)
     
     return cell
   }

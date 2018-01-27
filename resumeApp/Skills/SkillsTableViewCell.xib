@@ -66,6 +66,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="label" destination="54E-fO-kUW" id="zDL-uE-LCg"/>
+                <outlet property="progressBar" destination="R96-wq-gtw" id="eN7-UK-RVg"/>
+            </connections>
             <point key="canvasLocation" x="25" y="104"/>
         </tableViewCell>
     </objects>

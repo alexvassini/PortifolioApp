@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import UICircularProgressRing
 
 class SkillsTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
+  @IBOutlet weak var label: UILabel!
+  @IBOutlet weak var progressBar: UICircularProgressRingView!
+  
+  
+  
+  override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

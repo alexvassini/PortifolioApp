@@ -27,6 +27,13 @@
 		ACAEBC87201BAC2B005434EB /* 002-linkedin.png in Resources */ = {isa = PBXBuildFile; fileRef = ACAEBC7E201BAC2B005434EB /* 002-linkedin.png */; };
 		ACAEBC8A201BDCC0005434EB /* SkillsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAEBC88201BDCC0005434EB /* SkillsTableViewCell.swift */; };
 		ACAEBC8B201BDCC0005434EB /* SkillsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACAEBC89201BDCC0005434EB /* SkillsTableViewCell.xib */; };
+		ACAEBC95201BE6D8005434EB /* SimuladorItapolis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACAEBC8C201BE6D2005434EB /* SimuladorItapolis.jpg */; };
+		ACAEBC96201BE6D8005434EB /* simuladorEB.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACAEBC8D201BE6D3005434EB /* simuladorEB.jpg */; };
+		ACAEBC97201BE6D8005434EB /* antiFurtoCarro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACAEBC8E201BE6D4005434EB /* antiFurtoCarro.jpg */; };
+		ACAEBC99201BE6D8005434EB /* profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACAEBC90201BE6D4005434EB /* profile.jpg */; };
+		ACAEBC9B201BE6D8005434EB /* sensor1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACAEBC92201BE6D6005434EB /* sensor1.jpg */; };
+		ACAEBC9C201BE6D8005434EB /* Nasa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACAEBC93201BE6D7005434EB /* Nasa.jpg */; };
+		ACAEBC9F201BF4AA005434EB /* SkillsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAEBC9E201BF4AA005434EB /* SkillsModel.swift */; };
 		ACC9A544201A397300339943 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC9A543201A397300339943 /* background.png */; };
 		ACC9A546201A421F00339943 /* bg3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACC9A545201A421F00339943 /* bg3.jpg */; };
 		ACC9A548201A422900339943 /* bg1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACC9A547201A422900339943 /* bg1.jpg */; };
@@ -63,6 +70,13 @@
 		ACAEBC7E201BAC2B005434EB /* 002-linkedin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "002-linkedin.png"; sourceTree = "<group>"; };
 		ACAEBC88201BDCC0005434EB /* SkillsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsTableViewCell.swift; sourceTree = "<group>"; };
 		ACAEBC89201BDCC0005434EB /* SkillsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillsTableViewCell.xib; sourceTree = "<group>"; };
+		ACAEBC8C201BE6D2005434EB /* SimuladorItapolis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SimuladorItapolis.jpg; sourceTree = "<group>"; };
+		ACAEBC8D201BE6D3005434EB /* simuladorEB.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = simuladorEB.jpg; sourceTree = "<group>"; };
+		ACAEBC8E201BE6D4005434EB /* antiFurtoCarro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = antiFurtoCarro.jpg; sourceTree = "<group>"; };
+		ACAEBC90201BE6D4005434EB /* profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile.jpg; sourceTree = "<group>"; };
+		ACAEBC92201BE6D6005434EB /* sensor1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sensor1.jpg; sourceTree = "<group>"; };
+		ACAEBC93201BE6D7005434EB /* Nasa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Nasa.jpg; sourceTree = "<group>"; };
+		ACAEBC9E201BF4AA005434EB /* SkillsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsModel.swift; sourceTree = "<group>"; };
 		ACC9A543201A397300339943 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		ACC9A545201A421F00339943 /* bg3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg3.jpg; sourceTree = "<group>"; };
 		ACC9A547201A422900339943 /* bg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg1.jpg; sourceTree = "<group>"; };
@@ -109,6 +123,12 @@
 			isa = PBXGroup;
 			children = (
 				ACC9A543201A397300339943 /* background.png */,
+				ACAEBC8E201BE6D4005434EB /* antiFurtoCarro.jpg */,
+				ACAEBC8C201BE6D2005434EB /* SimuladorItapolis.jpg */,
+				ACAEBC92201BE6D6005434EB /* sensor1.jpg */,
+				ACAEBC8D201BE6D3005434EB /* simuladorEB.jpg */,
+				ACAEBC93201BE6D7005434EB /* Nasa.jpg */,
+				ACAEBC90201BE6D4005434EB /* profile.jpg */,
 				ACC9A547201A422900339943 /* bg1.jpg */,
 				ACC9A549201A423600339943 /* bg2.jpg */,
 				ACC9A545201A421F00339943 /* bg3.jpg */,
@@ -176,6 +196,7 @@
 				ACE6E5C32017E671000F1F63 /* SkillsViewController.swift */,
 				ACAEBC88201BDCC0005434EB /* SkillsTableViewCell.swift */,
 				ACAEBC89201BDCC0005434EB /* SkillsTableViewCell.xib */,
+				ACAEBC9E201BF4AA005434EB /* SkillsModel.swift */,
 			);
 			path = Skills;
 			sourceTree = "<group>";
@@ -281,9 +302,13 @@
 				AC1207ED20193B79003AF801 /* Flight-Simulators.jpg in Resources */,
 				ACAEBC83201BAC2B005434EB /* 006-star.png in Resources */,
 				ACAEBC87201BAC2B005434EB /* 002-linkedin.png in Resources */,
+				ACAEBC95201BE6D8005434EB /* SimuladorItapolis.jpg in Resources */,
 				AC2F5A782016A734008D6B3B /* LaunchScreen.storyboard in Resources */,
 				AC2F5A752016A734008D6B3B /* Assets.xcassets in Resources */,
+				ACAEBC99201BE6D8005434EB /* profile.jpg in Resources */,
 				ACAEBC86201BAC2B005434EB /* 001-github.png in Resources */,
+				ACAEBC97201BE6D8005434EB /* antiFurtoCarro.jpg in Resources */,
+				ACAEBC9C201BE6D8005434EB /* Nasa.jpg in Resources */,
 				ACAEBC74201A7EFB005434EB /* AchievementTableViewCell.xib in Resources */,
 				AC2F5A732016A734008D6B3B /* Main.storyboard in Resources */,
 				ACC9A54A201A423600339943 /* bg2.jpg in Resources */,
@@ -292,7 +317,9 @@
 				ACC9A546201A421F00339943 /* bg3.jpg in Resources */,
 				ACAEBC7F201BAC2B005434EB /* 005-facebook.png in Resources */,
 				AC1207EB20193A78003AF801 /* ProjectTableViewCell.xib in Resources */,
+				ACAEBC96201BE6D8005434EB /* simuladorEB.jpg in Resources */,
 				ACAEBC84201BAC2B005434EB /* 009-cup.png in Resources */,
+				ACAEBC9B201BE6D8005434EB /* sensor1.jpg in Resources */,
 				ACAEBC85201BAC2B005434EB /* 007-cancel.png in Resources */,
 				ACAEBC80201BAC2B005434EB /* 008-checked.png in Resources */,
 				ACAEBC8B201BDCC0005434EB /* SkillsTableViewCell.xib in Resources */,
@@ -367,6 +394,7 @@
 				ACE6E5CB2017E70E000F1F63 /* ViewController.swift in Sources */,
 				AC1207E8201930A2003AF801 /* ProjectTableViewCell.swift in Sources */,
 				ACE6E5C82017E69F000F1F63 /* ProjectsViewController.swift in Sources */,
+				ACAEBC9F201BF4AA005434EB /* SkillsModel.swift in Sources */,
 				AC2F5A6E2016A734008D6B3B /* AppDelegate.swift in Sources */,
 				ACE6E5C42017E671000F1F63 /* SkillsViewController.swift in Sources */,
 				ACAEBC73201A7EFB005434EB /* AchievementTableViewCell.swift in Sources */,
